@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+/* 共通部分 */
+
+.containar{
+    max-width: 1050px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+.text-1{
+    font-size: 22px;
+    font-weight: bold;
+    color: #449eab;
+}
+.TEL-1{
+    font-size: 20px;
+    color: #449eab;
+}
+.dec-1{
+    font-size: 14px;
+}
+
+
+/* header */
+
+header{
+    border-top: 5px solid #449eab;
+    padding: 20px 0 0;
+}
+
+.header-title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header-nav-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.header-nav-list{
+    width: 20%;
+    text-align: center;
+    display: block;
+    border-right: 1px solid #ccc;
+}
