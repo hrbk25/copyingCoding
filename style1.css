@@ -30,7 +30,15 @@ li{
     border: 1px solid #ccc;
     border-left: 3px solid #449eab;
     margin-bottom: 20px;
-    background-image: linear-gradient(180deg, rgba(233, 233, 233, 0.43) 50%, rgba(172, 172, 172, 0.43));}
+    background-image: linear-gradient(180deg, rgba(233, 233, 233, 0.43) 50%, rgba(172, 172, 172, 0.43));
+}
+
+.text-3{
+    font-size: 18px;
+    font-weight: normal;
+    color: #449eab;
+    margin-bottom: 20px;
+}
 
 .TEL-1{
     font-size: 20px;
@@ -78,6 +86,22 @@ header{
     justify-content: space-between;
     margin-bottom: 20px;
 }
+.heder-right{
+    display: none;
+    cursor: pointer;
+}
+
+.burger{
+    width: 100%;
+}
+
+.burger .line{
+    width: 25px;
+    height: 3px;
+    background-color: #449eab;
+    margin: 5px;
+    margin-left: auto;
+}
 
 .header-nav-item{
     display: flex;
@@ -96,6 +120,17 @@ header{
     display: block;
     border-right: 1px solid #ccc;
 }
+.header-nav-list-selected{
+    color: #449eab;
+    width: 20%;
+    text-align: center;
+    display: block;
+    border-right: 1px solid #ccc;
+}
+
+.header-nav-list-selected a{
+    color: #449eab;
+}
 
 .header-nav-list:hover{
     background-color: #449eab;
@@ -109,24 +144,20 @@ header{
     border-right: none;
 }
 
+
 /* contents */
 
+/* ホーム */
 .contents-top{
     border-bottom: 1px solid #449eab;
 }
 .contents-img{
     display: flex;
-    align-items: center;
-    background:#449eab;
-    height: 540px;
     margin:0 auto 40px auto;
 }
-.img-1{
-    text-align: center;
+.img-1 img{
     width: 100%;
-    font-size: 40px;
-    font-weight: bold;
-    color: #fff;
+    height: 540px;
 }
 
 .contents-section{
@@ -157,6 +188,43 @@ header{
     float: right;
 }
 
+/* 院長紹介 */
+#director{
+    border-top: 1px solid #449eab;
+    padding-top: 20px;
+}
+#director a:hover{
+    text-decoration: underline;
+}
+#director .contents-section{
+    margin-top: 20px;
+}
+#director table{
+    text-align: left;
+}
+#director th, td{
+    padding: 15px 10px;
+}
+.section-item{
+    display: flex;
+    justify-content: space-between;
+}
+.section-left{
+    width: 100%;
+    margin-right: 20px;
+}
+.section-left img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.section-left p{
+    text-align: right;
+}
+.section-right{
+    width: 100%;
+}
+
 /* footer */
 footer{
     border-top: 5px solid #449eab;
@@ -167,6 +235,7 @@ footer{
 .footer-item{
     display: flex;  
     align-items: flex-end; 
+    justify-content: space-between;
 }
 .footer-nav{
     
@@ -176,11 +245,11 @@ footer{
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    font-size: 14px;
 }
 
 .footer-nav-item a{
     display: block;
-    padding: 5px;
 }
 .footer-nav-item a:hover{
     text-decoration: underline;
@@ -199,5 +268,100 @@ footer{
 .footer-copy{
     text-align: center;
     padding-top: 30px;
+}
+
+
+/* モバイル版 */
+@media(max-width:1050px){
+    /* 共通 */
+    .th, td{
+        padding: 20px 30px;
+    }
+    /* header */  
+    header{
+         margin:0px 10px;
+    }
+    /* ホーム */
+    /* contents */
+    .img-1 img{
+        width: 100%;
+        height: auto;
+    }
+    .contents-section{
+        margin:20px 10px 0 10px;
+    }
+    /* 院長紹介 */
+    .contents-link{
+        margin:0 10px;
+    }
+
+    .section-left img{
+        width: 100%;
+        height: auto;
+    }
+    /* footer */
+    .footer-item{
+        margin:0px 10px;
+    }
+}
+
+@media(max-width:600px){
+    /* 共通 */
+    th, td{
+        padding: 30px 20px;
+    }
+    /* header */
+    header .dec-2{
+        display: none;
+    }
+    .header-title{
+        display: block;
+    }
+    .header-item{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .heder-right{
+        display: block;
+    }
+    .header-TEL{
+        text-align: right;
+    }
+    .header-nav{
+        display: none;
+    }
+    /* ホーム */
+    /* contents */
+    .img-1 img{
+        margin-top: 10px;
+    }
+    .contents-top{
+        border-bottom: none;
+    }
+    
+    .section-nav{
+        font-size: 14px;
+    }
+    .section-nav-list span{
+        color: #449eab;
+        display: block;
+        border-bottom: 1px dotted #646464;
+        margin-bottom: 20px;
+    }
+    .section-nav-list{
+        border-bottom: none;
+        padding: 10px ;
+    }
+    /* 院長紹介 */
+    .section-item{
+        display: block;
+    }
+
+    /* footer */
+    .footer-nav{
+        display: none;
+  }
+
 }
 
